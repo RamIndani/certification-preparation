@@ -70,9 +70,11 @@
         android:id="@+id/subtitle"
         android:elevation="19dp"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="160dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <TextView
         android:text="@string/camera"
@@ -81,9 +83,11 @@
         app:layout_editor_absoluteX="16dp"
         app:layout_editor_absoluteY="208dp"
         android:id="@+id/textView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="207dp"
-        android:labelFor="@+id/cameraEdit"/>
+        android:labelFor="@+id/cameraEdit"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:text="@string/settings"
@@ -92,9 +96,11 @@
         app:layout_editor_absoluteX="16dp"
         app:layout_editor_absoluteY="256dp"
         android:id="@+id/textView2"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="255dp"
-        android:labelFor="@+id/settingsEdit"/>
+        android:labelFor="@+id/settingsEdit"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:layout_width="214dp"
@@ -105,8 +111,9 @@
         app:layout_editor_absoluteX="80dp"
         app:layout_editor_absoluteY="195dp"
         android:id="@+id/cameraEdit"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="194dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        android:layout_marginLeft="48dp" />
 
     <EditText
         android:layout_width="214dp"
@@ -117,8 +124,9 @@
         app:layout_editor_absoluteX="80dp"
         app:layout_editor_absoluteY="248dp"
         android:id="@+id/settingsEdit"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="247dp" />
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="47dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2" />
 
     <Button
         android:text="@string/upload"
@@ -151,6 +159,23 @@
         app:layout_constraintBottom_toBottomOf="@+id/activity_main_inference"
         android:layout_marginBottom="11dp"
         tools:layout_constraintBottom_creator="1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/singapore_description"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsEdit"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>
